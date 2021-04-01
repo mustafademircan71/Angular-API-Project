@@ -1,4 +1,5 @@
-using API.Data.DataContext;
+
+using API.Infrastructure.DataContext;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;

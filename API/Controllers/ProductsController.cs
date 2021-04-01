@@ -1,9 +1,8 @@
-﻿using API.Data.DataContext;
-using API.Data.DbModels;
+﻿using API.Infrastructure.DataContext;
+using API.Core.DbModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace API.Controllers
@@ -29,7 +28,6 @@ namespace API.Controllers
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
             return await _ctx.Products.FindAsync(id);
-            
         }
     }
 }
