@@ -12,7 +12,7 @@ namespace API.Core.Spesicifications
             Creteria = Creteria;
         }
         public Expression<Func<TEntity, bool>> Creteria { get; }
-
+         
         public List<Expression<Func<TEntity, object>>> Includes { get; } = new List<Expression<Func<TEntity, object>>>();
 
         protected void AddInlcude(Expression<Func<TEntity,object>> includeExpression)
