@@ -7,9 +7,13 @@ namespace API.Core.Spesicifications
 {
     public class BaseSpesification<TEntity> : ISpesification<TEntity>
     {
+        public BaseSpesification()
+        {
+
+        }
         public BaseSpesification(Expression<Func<TEntity,bool>> criteria)
         {
-            Creteria = Creteria;
+            Creteria = criteria;
         }
         public Expression<Func<TEntity, bool>> Creteria { get; }
          
