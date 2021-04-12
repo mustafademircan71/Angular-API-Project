@@ -42,5 +42,10 @@ namespace API.Infrastructure.İmplements
         {
             return SpesificationEveluator<TEntity>.GetQuery(_ctx.Set<TEntity>().AsQueryable(), spec);
         }
+
+        public async Task<int> CountAsync(ISpesification<TEntity> spec)
+        {
+            return await ApplySpesification(spec).CountAsync();
+        }
     }
 }

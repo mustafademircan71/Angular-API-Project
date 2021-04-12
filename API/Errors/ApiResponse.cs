@@ -18,7 +18,6 @@ namespace API.Errors
             string errorMessage = string.Empty;
             switch (statusCode)
             {
-               
                 case 400:
                     return "A Bad Request";
                  
@@ -31,7 +30,6 @@ namespace API.Errors
                 case 500:
                     return "Server Error";
                    
-
             }
             return errorMessage;
         }
