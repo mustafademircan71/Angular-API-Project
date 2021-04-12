@@ -10,6 +10,8 @@ namespace API.Core.Spesicifications
     {
         public ProductsWithProductTypeAndBrandSpecification(ProductSpecParams productSpecParams)
             :base(x=>
+                    (string.IsNullOrWhiteSpace(productSpecParams.Search)||x.Name.ToLower().Contains(productSpecParams.Search))
+                    &&
                     (!productSpecParams.BrandId.HasValue||x.ProductBrandId==productSpecParams.BrandId)
                     &&
                     (!productSpecParams.TypeId.HasValue||x.ProductTypeId==productSpecParams.TypeId)
